@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= title
+
+    ul
+        each val,i in aux
+            li= "AUX " + i + ": " + val

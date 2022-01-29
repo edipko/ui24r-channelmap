@@ -1,0 +1,74 @@
+extends layout
+
+
+block content
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+  h1= title
+
+  table(style='width:90%')
+        each val,i in aux
+            if (i == 1)
+                tr
+                    - var c=1
+                    while c <= 8
+                        if c % 2 == 0
+                            th(class="even")="AUX " + c
+                        else
+                            th(class="odd")="AUX " + c
+                        - c++
+                tr
+
+            if i % 2 == 0
+               td(class="even")=val
+            else
+               td(class="odd")=val
+
+  br
+  br
+  br
+
+  table(style='width:100%', border='1px solid black')
+    each val,i in inputs
+      if (i == 1)
+         tr()
+           - var c=1
+           while c < 11
+              if c % 2 == 0
+                 th(class="even")="CH " + c
+              else
+                 th(class="odd")="CH " + c
+              - c++
+         tr
+
+
+      if (i == 11)
+        tr
+        td(class="nosee")="NO"
+        tr
+          -var c=11
+          while c < 21
+            if c % 2 == 0
+              th(class="even")="CH " + c
+            else
+              th(class="odd")="CH " + c
+            - c++
+
+        tr
+
+      if i % 2 == 0
+          td(class="even")=val
+      else
+          td(class="odd")=val
+
+  br
+  br
+  a(href='/printlist') Print List
+  br
+  a(href='/inputlist') Input List
+  br
+  a(href='/outputlist') Output List
+
+
+
+

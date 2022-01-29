@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    h1= title
+
+    div(class="flex-container")
+       div(class="flex-child")
+            p(class="title") INPUT LIST
+            ul
+             each val,i in inputs
+               ul
+                 span.channel CH #{i}:
+                 nbsp
+                 span.value  #{val}
+
+
+
+       div(class="flex-child")
+             p(class="title") AUX LIST
+             ul
+              each val,i in aux
+                ul
+                  span.channel AUX #{i}:
+                  nbsp
+                  span.value  #{val}
+
+    br

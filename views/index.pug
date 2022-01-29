@@ -1,0 +1,12 @@
+extends layout
+
+
+block content
+  h1= title
+
+    form(id="filenameForm" action="/display" method="POST")
+        label.labelstyle JSON Filename
+        input(type='text' id='name' name='name' required='' value='/Users/edipko/Downloads/SS-2021.07.17.json')
+        button.btn.btn-primary(type='submit' id="button") Submit
+        br
+        button.btn.btn-primary(type='button' onclick='location.href="/query"') Query

@@ -1,0 +1,99 @@
+@page {
+  size: A4 landscape;
+}
+@page :left {
+  margin-left: 5cm;
+}
+
+@page :right {
+  margin-left: 5cm;
+}
+
+
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table {
+  border: none;
+  padding: 0px;
+  border-collapse: collapse;
+  float: right;
+}
+
+.even {
+  background-color: white;
+}
+
+.odd {
+  background-color: lightgray;
+}
+
+.nosee {
+  color: white;
+  height: 30px;
+  border: none;
+}
+
+br {
+  clear: both;
+  height: 20px;
+}
+
+th {
+  border-top: 1px solid black;
+  border-bottom: none;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+td {
+  border-top: none;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  font-size: larger;
+  color: blue;
+
+}
+
+
+.flex-container {
+  display: flex;
+  width: 70%;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid black;
+  font-size: large;
+}
+
+.flex-child:first-child {
+  margin-right: 0px;
+}
+
+p.title {
+  font-size: xx-large;
+  text-align: center;
+  text-decoration: underline;
+
+}
+
+span.channel {
+  font-weight: bolder;
+}
+span.value {
+  color: blue;
+}
+
+label {
+  font-size: small;
+}
